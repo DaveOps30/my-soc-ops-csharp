@@ -1,21 +1,23 @@
-<div class="flex flex-col items-center justify-center min-h-full p-6 bg-gray-50">
-    <div class="text-center max-w-sm">
-        <h1 class="text-4xl font-bold text-gray-900 mb-2">Soc Ops</h1>
-        <p class="text-lg text-gray-600 mb-8">Social Bingo</p>
+<div class="flex flex-col items-center justify-center min-h-full p-6 bg-linen">
+    <div class="text-center max-w-sm w-full">
+        <div class="animate-fade-slide-up">
+            <p class="text-xs tracking-widest text-muted uppercase mb-2">Social Bingo</p>
+            <h1 class="text-5xl font-light tracking-widest text-primary uppercase mb-8">Soc Ops</h1>
+        </div>
 
-        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 mb-8">
-            <h2 class="font-semibold text-gray-800 mb-3">How to play</h2>
-            <ul class="text-left text-gray-600 text-sm space-y-2">
-                <li>• Find people who match the questions</li>
-                <li>• Tap a square when you find a match</li>
-                <li>• Get 5 in a row to win!</li>
+        <div class="bg-surface rounded-xl border border-calm p-6 mb-6 animate-fade-slide-up delay-1">
+            <h2 class="text-xs tracking-widest uppercase text-muted font-semibold mb-4">How to play</h2>
+            <ul class="text-left text-muted text-sm font-light space-y-2">
+                <li>— Find people who match the questions</li>
+                <li>— Tap a square when you find a match</li>
+                <li>— Get 5 in a row to win</li>
             </ul>
         </div>
 
         <button
             @onclick="OnStart"
-            class="w-full bg-accent text-white font-semibold py-4 px-8 rounded-lg text-lg active:bg-accent-light transition-colors">
-            Start Game
+            class="w-full bg-sage text-white font-semibold tracking-widest uppercase py-4 px-8 rounded-xl text-sm transition-colors hover:bg-sage-hover animate-fade-slide-up delay-2">
+            Begin
         </button>
     </div>
 </div>
