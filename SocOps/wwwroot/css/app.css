@@ -5,8 +5,25 @@ body,
     margin: 0;
 }
 
+:root {
+    --color-bg: #EDE8DF;
+    --color-surface: #F7F3EC;
+    --color-border: #D4C9B7;
+    --color-text: #2C2016;
+    --color-text-muted: #7A6B56;
+    --color-accent: #3E6B4E;
+    --color-accent-hover: #325840;
+    --color-marked-bg: #CFDFD3;
+    --color-marked-border: #7DAF8A;
+    --color-marked-text: #254D34;
+    --color-winning-bg: #F0E2CA;
+    --color-winning-border: #C8996A;
+    --color-winning-text: #7A3E12;
+}
+
 body {
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 300;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -161,6 +178,67 @@ button:disabled {
 .animate-\[bounce_0\.5s_ease-out\] {
     animation: bounce 0.5s ease-out;
 }
+
+/* Scandi Warm Forest semantic utilities */
+.bg-linen {
+    background-color: var(--color-bg);
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 2px,
+        rgba(44, 32, 22, 0.015) 2px,
+        rgba(44, 32, 22, 0.015) 4px
+    );
+}
+.bg-surface { background-color: var(--color-surface); }
+.bg-sage { background-color: var(--color-accent); }
+.bg-marked-calm { background-color: var(--color-marked-bg); }
+.bg-winning-calm { background-color: var(--color-winning-bg); }
+
+.text-primary { color: var(--color-text); }
+.text-muted { color: var(--color-text-muted); }
+.text-sage { color: var(--color-accent); }
+.text-marked { color: var(--color-marked-text); }
+.text-winning { color: var(--color-winning-text); }
+
+.border-calm { border-color: var(--color-border); }
+.border-marked-calm { border-color: var(--color-marked-border); }
+.border-winning { border-color: var(--color-winning-border); }
+
+.rounded-2xl { border-radius: 1rem; }
+.gap-2 { gap: 0.5rem; }
+.tracking-widest { letter-spacing: 0.15em; }
+.tracking-wide { letter-spacing: 0.06em; }
+.font-light { font-weight: 300; }
+.font-heading { font-family: 'Lora', serif; }
+.max-w-lg { max-width: 32rem; }
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.text-base { font-size: 1rem; line-height: 1.5rem; }
+
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 0.75rem; }
+.mt-4 { margin-top: 1rem; }
+.mt-6 { margin-top: 1.5rem; }
+.mt-8 { margin-top: 2rem; }
+
+.py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.uppercase { text-transform: uppercase; }
+.shadow-md { box-shadow: 0 2px 8px rgba(44, 32, 22, 0.08); }
+
+@keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-slide-up { animation: fadeSlideUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.22s; }
+.delay-3 { animation-delay: 0.36s; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.96) translateY(6px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+.animate-fade-in { animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) both; }
 
 #blazor-error-ui {
     color-scheme: light only;
